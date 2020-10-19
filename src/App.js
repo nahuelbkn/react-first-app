@@ -10,10 +10,11 @@ class App extends React.Component
   {
     return (
       <div className="App">
-        <Jumbotron></Jumbotron>
+        <Jumbotron titulo="Titulo Jumbotron"></Jumbotron>
         <List></List>
-        <Card></Card>
-        <Card></Card>
+        <Card title="Titulo0" random={Math.random().toFixed(2)} techList={["JavaScript", "PHP", "Node.js"]}></Card>
+        <Card title="Titulo1" random={Math.random().toFixed(2)} techList={["JavaScript", "PHP", "Node.js"]}></Card>
+        <Card title="Titulo2" random={Math.random().toFixed(2)} techList={["JavaScript", "PHP", "Node.js"]}></Card>
       </div>
     );
   }

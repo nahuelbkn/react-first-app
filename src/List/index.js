@@ -1,4 +1,5 @@
 import React from 'react';
+import ListItem from "../ListItem";
 
 class List extends React.Component
 {
@@ -34,7 +35,7 @@ class List extends React.Component
                 {
                     this.state.arrayItems.map(function(item){
                         return (
-                            <li className={`list-group-item ${ item.active ? `active` : ``} `}>{item.text}</li>
+                            <ListItem texto={item.text}></ListItem>
                         )
                     })
                 }

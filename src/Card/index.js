@@ -2,13 +2,13 @@ import React from 'react';
 
 class Card extends React.Component
 {
-    constructor()
+    constructor(props)
     {
-        super();
+        super(props);
         this.state = {
-            card_title:"Titulo2",
-            random: Math.random(),
-            listOfTechnologies: ["JavaScript", "PHP", "Node.js"]
+            card_title: this.props.title,
+            random: this.props.random,
+            listOfTechnologies: this.props.techList
         };
     }
 
@@ -19,7 +19,7 @@ class Card extends React.Component
                 <img src="https://miro.medium.com/max/700/0*oZLL-N4dGNlBe4Oh.png" className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{this.state.card_title}</h5>
-                    <p className="card-text">{this.state.random.toFixed(2)}</p>
+                    <p className="card-text">{this.state.random}</p>
                 </div>
                 <ul className="list-group list-group-flush">
                     {
