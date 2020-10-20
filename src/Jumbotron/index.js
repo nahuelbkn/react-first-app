@@ -15,6 +15,11 @@ class Jumbotron extends React.Component
         }
     }
 
+    saludar = (event) => {
+        event.preventDefault();
+        console.log("Hola, hicieron click.");
+    }
+
     render()
     {
         return (
@@ -23,7 +28,7 @@ class Jumbotron extends React.Component
                 <p className="lead">{this.state.lead}</p>
                 <hr className="my-4" />
                 <p>{this.state.infoExtra}</p>
-        <a className="btn btn-primary btn-lg" href="#" role="button">{this.state.textButton}</a>
+                <a onClick={ this.saludar } className="btn btn-primary btn-lg" href="#" role="button">{this.state.textButton}</a>
             </div>
         );
     }
